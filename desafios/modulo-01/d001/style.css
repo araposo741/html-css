@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url(./fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --cor1: #000000;
+    --cor2: #1d1a39;
+    --cor3: #451952;
+    --cor4: #884297;
+    --cor5: #ffffff;
+    --cor6: #7d7d7d;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    font-family: var(--fonte-destaque);
+    padding: 30px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    color: var(--cor1);
+    font-size: 2.5em;
+}
+
+header p {
+    color: var(--cor2);
+    font-size: 1.2em;
+    padding: 10px 20px 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav.menu-desktop ul li {
+    display:inline-block;
+    padding: 5px 10px;
+}
+
+header nav.menu-desktop ul li a {
+    text-decoration: none;
+    color: var(--cor6);
+    padding: 10px;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop ul li a:hover {
+    color: var(--cor4);
+    transform: scale(1.1);
+}
+
+.btn-abrir-menu i {
+    color: var(--cor2);
+    font-size: 35px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    background-color: var(--cor2);
+    height: 100vh;
+    width: 0%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 4%;
+}
+
+.menu-mobile .btn-fechar i {
+    color: var(--cor4);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li {
+    padding: 10px 0%;
+}
+
+.menu-mobile nav ul li a {
+    display: block;
+    color: var(--cor5);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px 8%;
+    transition: .2s;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: var(--cor4);
+}
+
+.overlay-menu {
+    background-color: #000000c9;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+body {
+    background-color: var(--cor5);
+}
+
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+}
+
+main h1 {
+    font-family: var(--fonte-android);
+    font-size: 1.6em;
+    font-weight: normal;
+    color: var(--cor2);
+}
+
+main p {
+    font-family: var(--fonte-padrao);
+    color: var(--cor1);
+    padding: 15px 0;
+    text-align: justify;
+    text-indent: 25px;
+    line-height: 1.5em;
+}
+
+main strong {
+    color: var(--cor3);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor4);
+    transition: .2s;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0 -10px 30px -10px;
+    padding: 2.9px;
+    padding-bottom: 58%;
+    position: relative;
+}
+
+div.video iframe {
+    border-radius: 10px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: #c566daa1;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.355);
+}
+
+aside h2 {
+    background-color: var(--cor4);
+    color: var(--cor5);
+    padding: 10px;
+    margin: -10px -10px 0 -10px;
+    border-radius: 10px 10px 0 0;
+}
+
+aside ul {
+    list-style: none;
+    list-style-position: inside;
+    columns: 2;
+}
+
+footer {
+    background-color: var(--cor1);
+    color: var(--cor6);
+    text-align: center;
+    padding: 10px;
+    font-size: .9em;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--cor6);
+    font-weight: bolder;
+    transition: .2s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor5);
+}
+
+@media screen and (max-width: 1200px) {
+    .menu-desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1199.9px) {
+    .btn-abrir-menu {
+        display: none;
+    }
+}

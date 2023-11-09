@@ -1,0 +1,28 @@
+* {
+    margin: 10px 5px;
+    padding: 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 18px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li a{
+    color: blue;
+}
+
+ul li a:hover {
+    color: blueviolet;
+}

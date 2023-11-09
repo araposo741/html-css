@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.897);
+}
+
+div {
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    padding-bottom: 20px;
+}
+
+i {
+    padding-top: 20px;
+    color: rgba(169, 169, 169, 0.629);
+    font-size: 30px;
+}
+
+i:hover {
+    color: white;
+    font-size: 40px;
+}
