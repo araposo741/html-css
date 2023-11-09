@@ -382,7 +382,7 @@ footer .main {
 .footer-links p {
     padding: 5px;
     font-size: 13px;
-    color: rgba(0, 0, 0, 0.666);
+    color: var(--gray);
 }
 
 .footer-links .footer-social .social-icons i{
@@ -396,6 +396,22 @@ footer .main {
     border-radius: 50%;
     color: var(--blue);
     transform: scale(1.2em);
+}
+
+.footer-links .footer-contact a {
+  color: var(--gray);
+  text-decoration: none;
+  transition: .2s;
+}
+
+.footer-links .footer-contact a p {
+  transition: .2s;
+}
+
+.footer-links .footer-contact a p:hover {
+  background-color: #dedede3b;
+  border-radius: 5px;
+  color: var(--blue);
 }
 
 footer .last {
