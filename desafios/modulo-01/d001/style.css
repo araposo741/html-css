@@ -236,16 +236,38 @@ footer {
     font-size: .9em;
 }
 
+footer h3 {
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
 footer a {
     text-decoration: none;
     color: var(--cor6);
     font-weight: bolder;
-    transition: .2s;
 }
 
 footer a:hover {
     text-decoration: underline;
     color: var(--cor5);
+}
+
+footer a i{
+    text-decoration: none;
+    color: var(--cor6);
+    font-weight: bolder;
+    padding: 10px 20px;
+    transition: .2s;
+}
+
+footer a i:hover {
+    color: var(--cor5);
+    transform: scale(1.2em);
+}
+
+footer p {
+    padding-top: 10px;
 }
 
 @media screen and (max-width: 1200px) {
